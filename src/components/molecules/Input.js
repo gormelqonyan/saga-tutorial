@@ -7,8 +7,7 @@ const Input = styled.input`
   outline: none;
   width: 100%;
   box-sizing: border-box;
-  ${({margin}) => margin ? `margin: ${margin}` : ""}
-  
-`
+  ${({ margin }) => (margin ? `margin: ${margin}` : "")}
+`;
 
 export default Input;

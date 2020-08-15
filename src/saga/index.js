@@ -1,8 +1,6 @@
-import {all} from "redux-saga/effects"
-import {authSaga, tokenWatcher} from "./auth";
+import { all } from "redux-saga/effects";
+import { authSaga } from "./auth";
 
-export const rootSaga = function * () {
-    yield all([
-        authSaga()
-    ])
-}
+export const rootSaga = function* () {
+  yield all([authSaga()]);
+};

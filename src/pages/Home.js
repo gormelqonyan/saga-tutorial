@@ -1,21 +1,31 @@
 import React from "react";
-import {Button} from "../components/atoms/ Button";
-import {action} from "../store";
-import {LOGOUT} from "../ constant";
-import {Text} from "../components/atoms/Text";
+import styled from "styled-components";
+import Header from "../components/organizms/Header/Header";
+import Categories from "../components/molecules/Categoryes/Categoryes";
+
+const Container = styled.div`
+  display: flex;
+  height: 100vh;
+`;
+
+const Wrapper = styled.div`
+  flex: 1;
+  background-color: #fff9fe;
+`;
 
 const Home = () => {
-    const logout = () => {
-        action(LOGOUT)
-    }
-    return (
-        <div>
-            <Button bgColor={"#2978e2"} onClick={logout}>
-                <Text color={"#fff"}>Logout</Text>
-            </Button>
-            Home
-        </div>
-    )
-}
+  return (
+    <>
+      <Container>
+        <Wrapper>
+          <Header />
+          <div className="container">
+            <Categories categories={[]} />
+          </div>
+        </Wrapper>
+      </Container>
+    </>
+  );
+};
 
 export default Home;
